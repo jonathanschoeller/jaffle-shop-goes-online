@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  base: 
+    image: xemuliam/dbt:1.1-bigquery
+    volumes:
+      - ".:/app"
+      - "~/.dbt:/root/.dbt:ro"
+    working_dir: /app
+    command: bash
